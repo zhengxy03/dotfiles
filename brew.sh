@@ -19,3 +19,13 @@ else
         brew unlink pkg-config
     fi
 fi
+
+#perl
+echo "==> install Perl 5.34"
+brew install perl
+
+if grep -q -i PERL_534_PATH $HOME/.bashrc; then
+    echo "==> .bashrc has already contains PERL_534_PATH"
+else
+    echo "==> Updating .bashrc with PERL_534_PATH"
+    
